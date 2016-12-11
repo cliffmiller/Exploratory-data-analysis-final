@@ -29,7 +29,7 @@ aggregatedEmissions <- aggregate(Emissions ~ year + type, baltimoreData, sum)
 
 print("Building plot...")
 
-png("plot3.png", height = 480, width = 480)
+png("plot3.png")
 g <- ggplot(aggregatedEmissions, aes(year, Emissions, color = type))
 g <- g + geom_line() + ylab("Total PM2.5 Emissions") + ggtitle("Total Emissions in Baltimore (1999 to 2008)")
 print(g)

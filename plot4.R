@@ -33,7 +33,7 @@ aggregatedEmissions <-aggregate(Emissions ~ year + type, sub1, sum)
 
 print("Building plot...")
 
-png("plot4.png", height = 480, width = 480)
+png("plot4.png")
 g <- ggplot(aggregatedEmissions, aes(x = factor(year), y = Emissions)) 
 g <- g + geom_bar(stat = "identity", aes(fill = type))
 g <- g + xlab("year") + ylab("Total Emissions")

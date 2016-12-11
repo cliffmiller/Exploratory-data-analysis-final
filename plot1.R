@@ -32,7 +32,7 @@ currentSCIPEN <- options("scipen")
 #Configure R not to use scientific notation in the graph
 options(scipen = 999)
 
-png("plot1.png", height = 480, width = 480)
+png("plot1.png")
 plot(aggregatedEmissions, type = "b", pch = 19, col = "blue", main = "Total Emissions")
 dev.off()
 
